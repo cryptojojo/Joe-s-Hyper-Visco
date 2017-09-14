@@ -1,0 +1,5 @@
+UN_rate_40_sim.txt 0.322402
+UN_rate_10_sim.txt 0.153169
+UN_rate_1_simp_sim.txt 0.0441137
+UN_rate_1e-1_simp_sim.txt 0.0646389
+UN_rate_1e-2_sim.txt 0.260258

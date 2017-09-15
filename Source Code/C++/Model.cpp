@@ -45,10 +45,6 @@ void Model::identifyHyperData(string model)
 		lambda = stod(lambdaS);
 
 
-
-		cout << mu;
-		cout << lambda;
-
 	}
 
 	if (model == "neo")

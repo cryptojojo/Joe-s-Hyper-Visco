@@ -4,6 +4,7 @@
 #include <istream>
 #include <algorithm>
 
+#include "ModelStructs.h"
 #include "Model.h"
 
 using namespace std;
@@ -25,67 +26,72 @@ void Model::identifyModel()
 	transform(model.begin(), model.end(), model.begin(), ::tolower);					// make model name all lower case
 
 	modelType = model;
-	
+
 }
 
-void Model::identifyHyperData(string model)
+arruda Model::identifyHyperDataArruda()
 {
-	if (model == "arruda-boyce")
-	{
-		string waste, muS, lambdaS;									// to get from text file
-		double mu, lambda;											// to convert to number
+	arruda arrudaV;
 
-		ifstream ModelFile("Hyper_Prony_Material_Model.txt");
-		getline(ModelFile, waste);									// ignore line 1
-		getline(ModelFile, waste);									// ignore line 2
-		getline(ModelFile, muS, ',');								// get mu
-		getline(ModelFile, lambdaS, ',');							// get lambda
-		
-		mu = stod(muS);
-		lambda = stod(lambdaS);
+	string waste, muS, lambdaS;									// to get from text file
 
+	ifstream ModelFile("Hyper_Prony_Material_Model.txt");
+	getline(ModelFile, waste);									// ignore line 1
+	getline(ModelFile, waste);									// ignore line 2
+	getline(ModelFile, muS, ',');								// get mu
+	getline(ModelFile, lambdaS, ',');							// get lambda
 
-	}
+	arrudaV.mu = stod(muS);
+	arrudaV.lambda = stod(lambdaS);
 
-	if (model == "neo")
-	{
-
-
-	}
-
-
-	if (model == "vanderwaals")
-	{
-
-
-	}
-
-	if (model == "polynomial")					// Moony Rivlin
-	{
-
-
-	}
-
-	if (model == "odgen3")
-	{
-
-
-
-	}
-	if (model == "odgen6")
-	{
-
-
-	}
-	if (model == "yeoh")
-	{
-
-
-	}
-
-
-
+	return arrudaV;
 }
+
+neo Model::identifyHyperDataNeo()
+{
+	neo neoV;
+
+	return neoV;
+}
+
+van Model::identifyHyperDataVan()
+{
+	van vanV;
+
+	return vanV;
+}
+
+moon Model::identifyHyperDataMoon()
+{
+	moon moonV;
+
+	return moonV;
+}
+
+ogden3 Model::identifyHyperDataOgden3()
+{
+	ogden3 ogden3V;
+
+	return ogden3V;
+}
+
+ogden6 Model::identifyHyperDataOgden6()
+{
+	ogden6 ogden6V;
+
+	return ogden6V;
+}
+
+yeoh Model::identifyHyperDataYeoh()
+{
+	yeoh yeohV;
+
+	return yeohV;
+}
+
+
+
+
 
 string Model::getModel()
 {

@@ -6,6 +6,7 @@
 #include "HyperVisco.h"
 #include "Model.h"
 #include "Output.h"
+#include "ModelStructs.h"
 
 
 using namespace std;
@@ -13,10 +14,54 @@ using namespace std;
 
 int main() {
 
-	Model joe;
+	Model info;
 
-	joe.identifyModel();
-	joe.identifyHyperData(joe.getModel());
+	info.identifyModel();
+	
+
+	if (info.getModel() == "arruda-boyce")
+	{
+
+
+	}
+
+	if (info.getModel() == "neo")
+	{
+
+
+	}
+
+
+	if (info.getModel() == "vanderwaals")
+	{
+
+
+	}
+
+	if (info.getModel() == "polynomial")					// Moony Rivlin
+	{
+
+
+	}
+
+	if (info.getModel() == "odgen3")
+	{
+
+
+
+	}
+	if (info.getModel() == "odgen6")
+	{
+
+
+	}
+	if (info.getModel() == "yeoh")
+	{
+
+
+	}
+
+
 
 
 

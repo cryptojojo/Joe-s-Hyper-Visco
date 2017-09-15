@@ -2,6 +2,7 @@
 #define MODEL_H
 
 #include <string>
+#include "ModelStructs.h"
 using namespace std;
 
 
@@ -11,60 +12,24 @@ class Model
 public:
 	string modelType;
 
-	struct arruda {
-		double mu;
-		double lambda;
-	};
-	struct neo {
-		double mu;
-	};
-	struct van {
-		double mu;
-		double lambda;
-		double a;
-		double beta;
-	};
-	struct moon {
-		double c1;
-		double c2;
-	};
-	struct ogden3 {
-		double mu1;
-		double alpha1;
-		double mu2;
-		double alpha2;
-		double mu3;
-		double alpha3;
-	};
-	struct ogden6 {
-		double mu1;
-		double alpha1;
-		double mu2;
-		double alpha2;
-		double mu3;
-		double alpha3;
-		double mu4;
-		double alpha4;
-		double mu5;
-		double alpha5;
-		double mu6;
-		double alpha6;
-	};
-	struct yeoh {
-		double c1;
-		double c2;
-		double c3;
-
-	};
 
 
 
 
 
-	void identifyModel();			// identifies the model name and sets it to modelType
-	void identifyHyperData(string);
+
+
+	void identifyModel();							// identifies the model name and sets it to modelType
+	
+	arruda identifyHyperDataArruda();
+	neo identifyHyperDataNeo();
+	van identifyHyperDataVan();
+	moon identifyHyperDataMoon();
+	ogden3 identifyHyperDataOgden3();
+	ogden6 identifyHyperDataOgden6();
+	yeoh identifyHyperDataYeoh();
+	
 	string getModel();
-
 };
 
 #endif

@@ -1,0 +1,11 @@
+*MATERIAL, NAME=Rubber,
+*HYPERELASTIC, POLYNOMIAL, N=1,
+0.02,2.22,-0.3,1.23,0.0,0.0, 
+**
+*Viscoelastic,Time=Prony,
+0.1,,0.1,
+0.1,,1.0,
+0.1,,10.0,
+0.1,,100.0,
+0.1,,1000.0,
+

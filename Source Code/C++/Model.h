@@ -12,6 +12,7 @@ private:
 	string modelType;
 
 public:
+	
 
 	void identifyModel();			// identifies the model name and sets it to modelType
 	void identifyHyperData(string);

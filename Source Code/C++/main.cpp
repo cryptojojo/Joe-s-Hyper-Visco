@@ -16,8 +16,7 @@ int main() {
 	Model joe;
 
 	joe.identifyModel();
-
-	cout << joe.getModel();
+	joe.identifyHyperData(joe.getModel());
 
 
 

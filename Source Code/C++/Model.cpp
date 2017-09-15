@@ -19,18 +19,35 @@ void Model::identifyModel()
 	getline(ModelFile, waste, ',');														// skip "*Hyperelastic"
 	getline(ModelFile, model, ',');														// get the model name (e.g. Yeoh, Ogden, etc)
 
+	ModelFile.close();
+
 	model.erase(remove_if(model.begin(), model.end(), isspace), model.end());			// take spaces from the model name
 	transform(model.begin(), model.end(), model.begin(), ::tolower);					// make model name all lower case
 
 	modelType = model;
-
+	
 }
 
 void Model::identifyHyperData(string model)
 {
 	if (model == "arruda-boyce")
 	{
+		string waste, muS, lambdaS;									// to get from text file
+		double mu, lambda;											// to convert to number
 
+		ifstream ModelFile("Hyper_Prony_Material_Model.txt");
+		getline(ModelFile, waste);									// ignore line 1
+		getline(ModelFile, waste);									// ignore line 2
+		getline(ModelFile, muS, ',');								// get mu
+		getline(ModelFile, lambdaS, ',');							// get lambda
+		
+		mu = stod(muS);
+		lambda = stod(lambdaS);
+
+
+
+		cout << mu;
+		cout << lambda;
 
 	}
 

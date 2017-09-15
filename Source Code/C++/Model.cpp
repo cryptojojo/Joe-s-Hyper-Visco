@@ -26,6 +26,54 @@ void Model::identifyModel()
 
 }
 
+void Model::identifyHyperData(string model)
+{
+	if (model == "arruda-boyce")
+	{
+
+
+	}
+
+	if (model == "neo")
+	{
+
+
+	}
+
+
+	if (model == "vanderwaals")
+	{
+
+
+	}
+
+	if (model == "polynomial")					// Moony Rivlin
+	{
+
+
+	}
+
+	if (model == "odgen3")
+	{
+
+
+
+	}
+	if (model == "odgen6")
+	{
+
+
+	}
+	if (model == "yeoh")
+	{
+
+
+	}
+
+
+
+}
+
 string Model::getModel()
 {
 	return modelType;

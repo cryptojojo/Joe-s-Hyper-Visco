@@ -1,5 +1,5 @@
 *MATERIAL, NAME=Rubber,
-*HYPERELASTIC, OGDEN, N=3,
+*HYPERELASTIC, OGDEN3, N=3,
 0.02,2.22,-0.3,1.23,0.02,2.22,0.0,0.0,0.0 
 **
 *Viscoelastic,Time=Prony,

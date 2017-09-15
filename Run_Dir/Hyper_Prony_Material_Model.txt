@@ -1,9 +1,11 @@
-*MATERIAL,NAME=Rubber,
-*Hyperelastic, Neo, Moduli=Instantaneous,
-1.025
-*Viscoelastic, Time=Prony,
-0.1,, 0.1,
-0.1,, 1.0,
-0.1,, 10.0,
-0.1,, 100.0,
-0.1,, 1000.0,
+*MATERIAL, NAME=VAN_DER_WAALS,
+*HYPERELASTIC, VAN DER WAALS,
+1.0, 1.0, 2.0, 3.0, 0.0,
+** 
+*Viscoelastic,Time=Prony,
+0.1,0.0,0.1,
+0.1,,1.0,
+0.1,,10.0,
+0.1,,100.0,
+0.1,,1000.0,
+
